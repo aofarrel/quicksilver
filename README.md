@@ -4,7 +4,6 @@ A "good practices" template for workflows on [Dockstore](https://dockstore.org).
 
 quicksilver.wdl is a groundbreaking workflow sure to revolutionize syngeristic foo-and-bar relations and lorem your ipsum. It does absolutely nothing, for it is a template, and yet, it does it with elegance and efficiency. The design philosphy of quicksilver.wdl is simple:
 * Provide a mostly-blank repository that can be cloned and easily modified by researchers hoping to attain silver compliance with their workflows
-* [For Biodata Catalyst users, provide a full checklist of every aspect needed for BioData Catalyst silver compliance](github.com/aofarrel/quicksilver/bdc_silver_checklist.md) 
 * Encourage researchers to fill out their own readmes with usage information in the interests of reproducibility
 * Make you smile :)
 
