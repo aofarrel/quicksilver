@@ -4,7 +4,7 @@ A "good practices" template for workflows on [Dockstore](https://dockstore.org).
 
 quicksilver.wdl is a groundbreaking workflow sure to revolutionize syngeristic foo-and-bar relations and lorem your ipsum. It does absolutely nothing, for it is a template, and yet, it does it with elegance and efficiency. The design philosphy of quicksilver.wdl is simple:
 * Provide a mostly-blank repository that can be cloned and easily modified by researchers hoping to attain silver compliance with their workflows
-* [For Biodata Catalyst users, provide a full checklist of every aspect needed for BioData Catalyst silver compliance](github.com/aofarrel/quicksilver/checklist.md) 
+* [For Biodata Catalyst users, provide a full checklist of every aspect needed for BioData Catalyst silver compliance](github.com/aofarrel/quicksilver/bdc_silver_checklist.md) 
 * Encourage researchers to fill out their own readmes with usage information in the interests of reproducibility
 * Make you smile :)
 
@@ -38,12 +38,6 @@ RUN cd samtools-1.11 && ./configure --without-curses && make && make install
 
 It may also be worth scanning your container with vulnerability-checking software to see if it has any major vulnerabilities. 
 
-### quicksilver.wdl
-This represents your "main" workflow file, the one that does whatever analysis you have planned. WDL is the example we are using here, but the same logic applies for CWL or Nextflow. Unlike our template, your workflow should actually be tested and confirmed to work on one of our cloud compute platforms. Docker containers used by your workflow file(s) ought to be referenced by the sha256 digest of a container known to work, not just tag.
-
-### checker.wdl
-This represents your checker workflow. Checker workflows are recommended for all workflows and are a great way to provide an easy test for both you and your users. [You can read more about them here](https://docs.dockstore.org/en/develop/advanced-topics/checker-workflows.html).
-
 ### quicksilver.json
 Represents your test data inputs. These should be open-access data in the form of hyperlinks. If you are writing a WDL and want this JSON to be able to be plugged into Terra directly, we recommend you put the data in a public google bucket and call include links in gs:// format rather than https://google.storage format. However, Google buckets are not a hard requirement -- what matters is that the data is public and useful as a test. Your test data may be downsampled or artificial, but it should actually run, ie, not just be a blank file.
 
@@ -51,8 +45,17 @@ You may want to include multiple test JSONs for different compute platforms -- f
 
 It should go without saying, but we will make note of it regardless: **Do not include controlled-access data here. Also do not include data derived from controlled-access data.** If you are looking for test files representative of real data, we recommend using 1000 Genomes, which is public.
 
+### quicksilver.wdl
+This represents your "main" workflow file, the one that does whatever analysis you have planned. WDL is the example we are using here, but the same logic applies for CWL or Nextflow. Unlike our template, your workflow should actually be tested and confirmed to work on one of our cloud compute platforms. Docker containers used by your workflow file(s) ought to be referenced by the sha256 digest of a container known to work, not just tag.
+
+### checker.wdl
+This represents your checker workflow. Checker workflows are recommended for all workflows and are a great way to provide an easy test for both you and your users. [You can read more about them here](https://docs.dockstore.org/en/develop/advanced-topics/checker-workflows.html).
+
 ### checker.json
 As above, but with inputs for your checker workflow.
+
+### checkertruth.txt
+A truth file for your checker workflow with contains the expected outputs of your main workflow. This doens't need to be in your repo -- you can instead host it on a public bucket, website, etc. Just make sure that it is public, wherever it is, so people can run your checker workflow.
 
 ## Cost Estimate
 Although not required, we also recommend including cost estimation information from one of our cloud platforms in your README. It could be as simple as "if running this on default settings on a single whole-genome BAM file, you can expect it to take about 4 hours and to cost about $12.00," or you could have a full breakdown of every task's estimated costs depending on whether or not you get lucky with preemptible VMs. There is no one-size-fits-all solution to cost estimation; include what you think will be helpful to your users.
