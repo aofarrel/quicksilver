@@ -17,7 +17,7 @@ task solong {
 
 workflow quicksilver {
   input {
-    String obligatory_reference = "and thanks for all the fish"
+    String obligatory_reference = "and farewell"
   }
   call solong {
     input:
