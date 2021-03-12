@@ -1,5 +1,6 @@
 # quicksilver
-A "good practices" template for workflows on Dockstore. Clone this repo as an example of a recommended structure for your repository.
+![https://img.shields.io/github/repo-size/aofarrel/quicksilver](https://img.shields.io/github/repo-size/aofarrel/quicksilver)  
+A "good practices" template for workflows on [Dockstore](https://dockstore.org). Clone this repo as an example of a recommended structure for your repository.
 
 quicksilver.wdl is a groundbreaking workflow sure to revolutionize syngeristic foo-and-bar relations and lorem your ipsum. It does absolutely nothing, for it is a template, and yet, it does it with elegance and efficiency. The design philosphy of quicksilver.wdl is simple:
 * Provide a mostly-blank repository that can be cloned and easily modified by researchers hoping to attain silver compliance with their workflows
