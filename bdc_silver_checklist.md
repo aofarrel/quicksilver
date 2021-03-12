@@ -1,3 +1,5 @@
+While this repo is focused on general good practices, you may also find it useful if you are seeking silver compliance with BioData Catalyst.
+
 | Thing                 | Details                                                                                            |
 |----------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Containers                 | A versioned container created from an official image with no critical vulnerabilities                                                                                            |
