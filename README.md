@@ -1,5 +1,5 @@
 # quicksilver
-A template for Biodata Catalyst silver workflows. Clone this repo as an example of a recommended structure for silver workflows.
+A template for silver workflows. Clone this repo as an example of a recommended structure for silver workflows.
 
 quicksilver.wdl is a groundbreaking workflow sure to revolutionize syngeristic foo-and-bar relations and lorem your ipsum. It does absolutely nothing, for it is a template, and yet, it does it with elegance and efficiency. The design philosphy of quicksilver.wdl is simple:
 * Provide a mostly-blank repository that can be cloned and easily modified by researchers hoping to attain silver compliance with their workflows
